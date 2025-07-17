@@ -1,0 +1,21 @@
+name: Print the Text File
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+
+jobs:
+  Read_Text_File:
+    runs-on: self-hosted
+    steps:
+      - name: Command for Git Checkout
+        uses: actions/Checkout@v2
+      - name: Read_Text_File
+        run: |
+          ls -l
+          cat hello.txt
